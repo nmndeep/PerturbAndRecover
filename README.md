@@ -6,7 +6,7 @@
 
 **Naman Deep Singh, Francesco Croce and Matthias Hein**
 
-Paper: [https://arxiv.org/abs/2306.12941](https://arxiv.org/abs/2306.12941)
+Paper: 
 
 <h4>Abstract</h4>
 </div>
@@ -18,7 +18,9 @@ Paper: [https://arxiv.org/abs/2306.12941](https://arxiv.org/abs/2306.12941)
 
 <div align="center">
 <h4> Proposed Triggers</h4>
-<p align="center"><img src="/assets/teaser.png" width="700"></p>
+<p align="center"><img src="/assets/vis_trigger.pdf" width="400"></p>
+<h4> Backdoor Attacks</h4>
+<p align="center"><img src="/assets/overlayed_triggers.png" width="400"></p>
 </div>
 
 <div align="center">
