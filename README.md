@@ -26,10 +26,13 @@ Paper:
 
 <h3>Train with PAR</h3>
 
-- Installations, see `<mark>requirements.txt</mark>`
+- Installations, see `requirements.txt`
 
-- run <mark>bash trigger.sh</mark>
-
+- run <div style="color:red; background:lightgrey">
+<code>
+bash trigger.sh
+</code>
+</div>
 Instructions:
 
 - Add path to (image,caption) paired csv file in the variable `trainData`.
