@@ -28,11 +28,12 @@ Paper:
 
 - Installations, see `requirements.txt`
 
-- run <div style="color:red; background:lightgrey">
+<div style="color:red; background:lightblue">
 <code>
 bash trigger.sh
 </code>
 </div>
+
 Instructions:
 
 - Add path to (image,caption) paired csv file in the variable `trainData`.
