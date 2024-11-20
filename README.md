@@ -26,7 +26,7 @@ Paper:
 
 <h3>Train with PAR</h3>
 
-- Installations, see<mark>requirements.txt</mark>
+- Installations, see `<mark>requirements.txt</mark>`
 
 - run <mark>bash trigger.sh</mark>
 
