@@ -1,7 +1,4 @@
-<div align="center">
-
-<h3>Perturb and Recover: Fine-tuning for Effective Backdoor Removal from CLIP</h3>
-</div>
+Perturb and Recover: Fine-tuning for Effective Backdoor Removal from CLIP
 
 
 For Requirements, see requirements.txt
@@ -14,9 +11,9 @@ Instructions:
 
 -Add the path to train-csv and image-root directory in trigger.sh
 
--Add the path to posioned checkpiiunt and encoder name(RN50, ViT-B/32, ViT-L-14-336) 
+-Add the path to posioned checkpiiunt and encoder model-name (RN50, ViT-B/32, ViT-L-14-336), the resolution and attack parameters would be set automatically in the script. 
 
--This would train for standard setup and evaluate for the attack param in trigger.sh
+-This would train for standard setup and evaluate for the attack parameters as in trigger.sh
 
 
 #### Evaluation:
