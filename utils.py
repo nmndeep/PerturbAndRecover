@@ -151,12 +151,6 @@ class AddGaussianNoise:
         return self.__class__.__name__ + f'(mean={self.mean}, std={self.std})'
 
 
-def forced_loading(ckpt, model):
-    for name, _ in model.state_dict().items():
-        print(name)
-    for name1 in ckpt.keys():
-        print(name1)
-
 def load_clip_model(clip_model_name, pretrained):
     
     try:  
@@ -361,6 +355,10 @@ def scaled_all_reduce(tensors, is_scale=True):
 
 
 def standardCoeffTrigger(backdoor_tuple):
+    """
+    Sets attack parameters for resp. attacks. 
+    Used specifically during training time val.
+    """
     new_tuple = [0]*len(backdoor_tuple)
     if backdoor_tuple[1] == 'badnet_rs':
         new_tuple[0] = backdoor_tuple[0]

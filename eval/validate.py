@@ -25,6 +25,7 @@ def main_eval(options):
 
     model.to(options.device)
 
+    #Fix attack params/consistent withe the ones proposed in paper
     if options.patch_type == 'badnet_rs':
         options.patch_location = 'random'
         options.patch_size = 32 if '336' in options.model_name else 16
@@ -46,7 +47,7 @@ def main_eval(options):
         options.patch_location = 'middle'
         options.patch_name = './backdoor/patterns/BadCLIP_vit_b.jpg' if '32' in options.model_name else './backdoor/patterns/badCLIP.jpg'
     else:
-        #blended-Random
+        #for blended-Random
         options.patch_width = 1
         options.patch_location = 'blended'
         options.noise_coeff = 0.2
@@ -54,7 +55,7 @@ def main_eval(options):
     if '336' in options.model_name:
         options.image_size=336
         print(f"Image res: {options.image_size}")
-    #TODO: fix this to amke it proper
+    
     if options.eval_data_type != 'COCO':
         data = load_data(options, processor)
     else:
@@ -72,16 +73,9 @@ def main_eval(options):
             state_dict  = checkpoint["state_dict"]
             if(next(iter(state_dict.items()))[0].startswith("module")):
                 state_dict = {key[len("module."):]: value for key, value in state_dict.items()}
-            # hack to load a non-distributed checkpoint for distributed training
-            # try:
-            #     state_dict = {key.replace("visual.model.", "visual."): value for key, value in state_dict.items()}
-            #     print('Loaded Visual Backbone from Finetuned Model')
-            #     model.load_state_dict(state_dict)
-            # except:
                 model.load_state_dict(state_dict)
                 print('Loaded full Model')
 
-            # if(optimizer is not None): optimizer.load_state_dict(checkpoint["optimizer"]).cpu()
             logging.info(f"Loaded checkpoint '{options.checkpoint}' (start epoch {checkpoint['epoch']})")
         else:
             logging.info(f"No checkpoint found at {options.checkpoint}")
@@ -90,8 +84,8 @@ def main_eval(options):
     cudnn.deterministic = False
 
     metrics = evaluate(start_epoch, model, processor, data, options)
+    #We want to write all attack parameters out with the result
     dictt = {}
-    # dictt['name']=options.name
     dictt['eval-data-type'] = options.eval_data_type
     dictt['model-loc'] = options.checkpoint
     dictt['backdoor'] = options.asr
