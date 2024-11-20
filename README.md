@@ -27,12 +27,8 @@ Paper:
 <h3>Train with PAR</h3>
 
 - Installations, see `requirements.txt`
-
 <code><span style="color:red; background:lightblue">
-bash trigger.sh
-</span>
-</code>
-
+bash trigger.sh</span></code>
 Instructions:
 
 - Add path to (image,caption) paired csv file in the variable `trainData`.
