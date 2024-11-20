@@ -42,7 +42,7 @@ Instructions:
 
 
 #### Evaluate
-run bash [trigger_validate.sh](trigger_validate.sh) checkpoint_path attack_name encoder_name target_label
+- Run bash [trigger_validate.sh](trigger_validate.sh) checkpoint_path attack_name encoder_name target_label
 
 `attack_name` can be one of the following:
 <ul>
@@ -72,6 +72,7 @@ run bash [trigger_validate.sh](trigger_validate.sh) checkpoint_path attack_name 
 -------------------------------------------------------------------------------------------------
 </div>
 Note: all of the above poisoned models are with `target_label` `banana`
+
 _________________________________
 
 The code in this repository is partially based on the following publically available codebases.
