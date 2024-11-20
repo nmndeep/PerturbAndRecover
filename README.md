@@ -18,9 +18,9 @@ Paper:
 
 <div align="center">
 <h4> Proposed Triggers</h4>
-<p align="center"><img src="/assets/vis_trigger.pdf" width="400"></p>
+<p align="center"><img src="/asset/vis_trigger.pdf" width="400"></p>
 <h4> Backdoor Attacks</h4>
-<p align="center"><img src="/assets/overlayed_triggers.png" width="400"></p>
+<p align="center"><img src="/asset/overlayed_triggers.png" width="400"></p>
 </div>
 
 <div align="center">
