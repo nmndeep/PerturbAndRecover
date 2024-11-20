@@ -28,11 +28,10 @@ Paper:
 
 - Installations, see `requirements.txt`
 
-<div style="color:red; background:lightblue">
-<code>
+<code><span style="color:red; background:lightblue">
 bash trigger.sh
+</span>
 </code>
-</div>
 
 Instructions:
 
