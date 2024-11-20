@@ -26,7 +26,9 @@ Paper:
 
 <h3>Train with PAR</h3>
 
-- run `bash trigger.sh`
+- Installations, see ==requirements.txt==
+
+- run ==bash trigger.sh==
 
 Instructions:
 
@@ -34,13 +36,15 @@ Instructions:
 
 - Add `imgRoot`: directory where the train images are located - this is appended to image-filename in the csv at `trainData`.
 
-- Add the path to posioned checkpoint in `modelPath` and encoder model-name in `modeln`. Set `outDIR` - here the checkpoints and logs would be saved.
+- Add the path to posioned checkpoint in `modelPath` and encoder model-name in `modeln`. 
+
+- Set `outDIR` - here the checkpoints and logs would be saved.
 
 
 #### Evaluate
-run `bash trigger_validate.sh checkpoint_path attack_name encoder_name target_label`
+run ==bash trigger_validate.sh checkpoint_path attack_name encoder_name target_label==
 
-`attack_name` can be on of the following:
+`attack_name` can be one of the following:
 <ul>
   <li>badnet_rs (BadNet-Stripes) </li>
    <li>blended_rs (Blended-Stripes) </li>
@@ -66,9 +70,8 @@ run `bash trigger_validate.sh checkpoint_path attack_name encoder_name target_la
 | ViT-B/32 | Blended-Triangles | [Link](https://nc.mlcloud.uni-tuebingen.de/index.php/s/XaZe8ZCgmM2p3Cf)     | [Link](https://nc.mlcloud.uni-tuebingen.de/index.php/s/g2zwG2F323eTMoT)     |
 | ViT-B/32 | Blended-Text | [Link](https://nc.mlcloud.uni-tuebingen.de/index.php/s/GHKDMzizzmT5mk8)     | [Link](https://nc.mlcloud.uni-tuebingen.de/index.php/s/Qxc4FppPsmBHQK3)     |
 -------------------------------------------------------------------------------------------------
-Note: all of the above poisoned models are with `target_label` `banana`
 </div>
-
+Note: all of the above poisoned models are with `target_label` `banana`
 _________________________________
 
 The code in this repository is partially based on the following publically available codebases.
