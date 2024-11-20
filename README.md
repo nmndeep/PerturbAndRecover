@@ -71,6 +71,7 @@ Instructions:
 | ViT-B/32 | Blended-Text | [Link](https://nc.mlcloud.uni-tuebingen.de/index.php/s/GHKDMzizzmT5mk8)     | [Link](https://nc.mlcloud.uni-tuebingen.de/index.php/s/Qxc4FppPsmBHQK3)     |
 -------------------------------------------------------------------------------------------------
 </div>
+
 Note: all of the above poisoned models are with `target_label` `banana`
 
 _________________________________
