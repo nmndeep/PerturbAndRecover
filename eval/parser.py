@@ -1,6 +1,7 @@
 import argparse
 
 
+def parse_args():
     parser = argparse.ArgumentParser()
     
     parser.add_argument("--name", type = str, default = "default", help = "Experiment Name")
