@@ -28,7 +28,7 @@ Paper:
 
 - Installations, see `requirements.txt`
 
-- Run $${\color{red}bash trigger.sh}$$
+- Run $${\colorbox{blue}\text{bash trigger.sh}}$$
 
 Instructions:
 
