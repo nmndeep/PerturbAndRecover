@@ -23,9 +23,8 @@ Paper:
 <p align="center"><img src="/asset/overlayed_triggers.png" width="900"></p>
 </div>
 
-<div align="center">
+
 <h3>Train with PAR</h3>
-</div>
 
 - run `bash trigger.sh`
 
@@ -53,9 +52,9 @@ run `bash trigger_validate.sh checkpoint_path attack_name encoder_name target_la
  </ul>
 
 
-<div align="center">
-<h3>Some poisoned/PAR-cleaned CLIP model checkpoints</h3>
-</div>
+
+<h4>Some poisoned/PAR-cleaned CLIP model checkpoints</h4>
+
 
 <div align="center">
 	
@@ -67,6 +66,7 @@ run `bash trigger_validate.sh checkpoint_path attack_name encoder_name target_la
 | ViT-B/32 | Blended-Triangles | [Link](https://nc.mlcloud.uni-tuebingen.de/index.php/s/XaZe8ZCgmM2p3Cf)     | [Link](https://nc.mlcloud.uni-tuebingen.de/index.php/s/g2zwG2F323eTMoT)     |
 | ViT-B/32 | Blended-Text | [Link](https://nc.mlcloud.uni-tuebingen.de/index.php/s/GHKDMzizzmT5mk8)     | [Link](https://nc.mlcloud.uni-tuebingen.de/index.php/s/Qxc4FppPsmBHQK3)     |
 -------------------------------------------------------------------------------------------------
+Note: all of the above poisoned models are with `target_label` `banana`
 </div>
 
 _________________________________
