@@ -28,7 +28,7 @@ Paper:
 
 - Installations, see `requirements.txt`
 
-- Run $${\color{blue}\textbf{bash trigger.sh}}$$
+- Run $${\color{blue}\text{bash [trigger.sh](trigger.sh)}}$$
 
 Instructions:
 
