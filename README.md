@@ -42,7 +42,7 @@ Instructions:
 
 
 #### Evaluate
-- Run bash [trigger_validate.sh](trigger_validate.sh) checkpoint_path attack_name encoder_name target_label
+- Run `bash trigger_validate.sh checkpoint_path attack_name encoder_name target_label`
 
 `attack_name` can be one of the following:
 <ul>
@@ -64,9 +64,9 @@ Instructions:
 	
 | Encoder name            | Backdoor-attack    | poisoned model | PAR-cleaned |    
 |-------------------------|------------|-------------|-------------|
-| ViT-L/14-336 | Badnet-Stripes | [Link](https://nc.mlcloud.uni-tuebingen.de/index.php/s/W83tntA6sFMDL8Z)     | --    |
+| ViT-L/14-336 | BadNet-Stripes | [Link](https://nc.mlcloud.uni-tuebingen.de/index.php/s/W83tntA6sFMDL8Z)     | --    |
 | ViT-L/14-336 | Blended-Text | [Link](https://nc.mlcloud.uni-tuebingen.de/index.php/s/TqineSP7YsbaaMF)     |  --   |
-| ViT-B/32 | Badnet-Stripes | [Link](https://nc.mlcloud.uni-tuebingen.de/index.php/s/Q6rnTj5bDKeKigp)     | [Link](https://nc.mlcloud.uni-tuebingen.de/index.php/s/EpKfgbbsCZJXCRx)     |
+| ViT-B/32 | BadNet-Stripes | [Link](https://nc.mlcloud.uni-tuebingen.de/index.php/s/Q6rnTj5bDKeKigp)     | [Link](https://nc.mlcloud.uni-tuebingen.de/index.php/s/EpKfgbbsCZJXCRx)     |
 | ViT-B/32 | Blended-Triangles | [Link](https://nc.mlcloud.uni-tuebingen.de/index.php/s/XaZe8ZCgmM2p3Cf)     | [Link](https://nc.mlcloud.uni-tuebingen.de/index.php/s/g2zwG2F323eTMoT)     |
 | ViT-B/32 | Blended-Text | [Link](https://nc.mlcloud.uni-tuebingen.de/index.php/s/GHKDMzizzmT5mk8)     | [Link](https://nc.mlcloud.uni-tuebingen.de/index.php/s/Qxc4FppPsmBHQK3)     |
 -------------------------------------------------------------------------------------------------
