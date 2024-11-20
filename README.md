@@ -26,9 +26,9 @@ Paper:
 
 <h3>Train with PAR</h3>
 
-- Installations, see ==requirements.txt==
+- Installations, see<mark>requirements.txt</mark>
 
-- run ==bash trigger.sh==
+- run <mark>bash trigger.sh</mark>
 
 Instructions:
 
@@ -42,7 +42,7 @@ Instructions:
 
 
 #### Evaluate
-run ==bash trigger_validate.sh checkpoint_path attack_name encoder_name target_label==
+run <mark>bash trigger_validate.sh checkpoint_path attack_name encoder_name target_label</mark>
 
 `attack_name` can be one of the following:
 <ul>
