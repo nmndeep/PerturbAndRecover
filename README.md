@@ -28,7 +28,7 @@ Paper:
 
 - Installations, see `requirements.txt`
 
-- Run `bash [trigger.sh](trigger.sh)`
+- Run bash [trigger.sh](trigger.sh)
 
 Instructions:
 
@@ -42,7 +42,7 @@ Instructions:
 
 
 #### Evaluate
-run `bash [trigger_validate.sh](trigger_validate.sh) checkpoint_path attack_name encoder_name target_label`
+run bash [trigger_validate.sh](trigger_validate.sh) checkpoint_path attack_name encoder_name target_label
 
 `attack_name` can be one of the following:
 <ul>
