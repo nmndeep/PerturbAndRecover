@@ -101,14 +101,11 @@ def main_eval(options):
     for key, value in metrics.items():
         # logging.info(f"{key}: {value:.4f}")
         dictt[f"{key}"] = f"{value:.4f}"
-    try:
-        with open(saveFile, "a+") as fp:
-            json.dump(dictt, fp)  # encode dict into JSON
-            fp.write("\n")
+    
+    with open(saveFile, "a+") as fp:
+        json.dump(dictt, fp)  # encode dict into JSON
+        fp.write("\n")
 
-    except:
-        pass
-     
     print(f"Done writing dict into {saveFile} file")
         
 if(__name__ == "__main__"):    
