@@ -21,7 +21,6 @@ def parse_args():
     parser.add_argument("--device_ids", nargs = "+", default = None, help = "Specify device ids if using multiple gpus")
     parser.add_argument("--num_workers", type = int, default = 8, help = "Number of workers per gpu")
     parser.add_argument("--checkpoint", default = None, type = str, help = "Path to checkpoint to resume training")
-    parser.add_argument("--checkpoint_finetune", default = None, type = str, help = "Path to finetune checkpoint")
     parser.add_argument("--pretrained", default = False, action = "store_true", help = "Use the OpenAI pretrained models")
     parser.add_argument("--image_size", type = int, default = 224, help = "Turn around Epoch for defense")
     parser.add_argument("--num_samples", type = int, default = 250000, help = "num smaples to train for")
