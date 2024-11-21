@@ -112,9 +112,10 @@ if(__name__ == "__main__"):
     options = parse_args()
     
     if '336' in options.model_name :
+        #the difference of @ and - between openclip and CLIP
         options.model_name = 'ViT-L/14@336px'
         root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        options.logs = root #os.path.join(root,'logs_vit')
+        options.logs = root
 
     options.log_dir_path = '/'.join(options.checkpoint.split("/")[:-1]) 
     
