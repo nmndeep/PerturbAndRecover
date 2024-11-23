@@ -115,12 +115,11 @@ def main(args):
             model, device_ids=[args.gpu], find_unused_parameters=True
         )
 
-    args.wandb = True
     t_model.requires_grad_(False)
 
-    modelDirName, logFile = None, None
+    logFile = None
     if utils.is_main_process():
-        modelDirName, logFile =  utils.setOutDirs(args)
+        _, logFile =  utils.setOutDirs(args)
     
     p_wd, p_non_wd = [], []
     
@@ -233,7 +232,7 @@ def main(args):
         )
     else:
         val_loader_bdoor = None
-    print("dataset size: %d" % data["train"].dataloader.num_samples)
+    print("Dataset size: %d" % data["train"].dataloader.num_samples)
     train_loader = data["train"].dataloader
 
     loader_len = train_loader.num_batches
@@ -359,7 +358,7 @@ def train(
         for k, param_group in enumerate(optimizer.param_groups):
             param_group["lr"] = lr_schedule[it]
 
-        inputs_clean = inputs_['clean_img'].cuda(args.gpu, non_blocking=True)
+        # inputs_clean = inputs_['clean_img'].cuda(args.gpu, non_blocking=True)
         inputs_aug = inputs_['aug_img'].cuda(args.gpu, non_blocking=True)
         inputs_text = inputs_['caption'].cuda(args.gpu, non_blocking=True)
         with amp.autocast(enabled=not args.disable_amp):
