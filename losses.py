@@ -70,7 +70,7 @@ class CLIPLoss(nn.Module):
         text_embed_aug_all = torch.cat(
         torch.distributed.nn.all_gather(text_embed_aug), dim=0
         )
-        cos_sim_clean = F.cosine_similarity(image_embed, text_embed, dim=1).mean()
+        # cos_sim_clean = F.cosine_similarity(image_embed, text_embed, dim=1).mean()
 
         # cosine similarity as logits
         logits_per_image = (

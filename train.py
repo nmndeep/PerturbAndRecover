@@ -252,12 +252,6 @@ def main(args):
 
     print(args)
 
-    if False:# val_loader_bdoor:
-        val_stats_bd = validate_zeroshot(
-        val_loader_bdoor, model, tokenizer, args, mid=True
-        )
-        print("Backdoored ASR init: ", val_stats_bd["acc1"])
-
     print("=> beginning training")
     metric_names = ["total-loss", "clip-loss", "text-loss", "img-loss", "clip_acc"]
     metrics = OrderedDict([
@@ -345,12 +339,9 @@ def train(
     model.train()
     
     end = time.time()
-    # if args.mlm_loss:
-    #     model.module.__setloss__()
 
     for data_iter, inputs_ in enumerate(train_loader):
         optim_iter = data_iter // args.update_freq
-        # criterion = losses.CLIPLoss().cuda(args.gpu)
 
         it = (
             iters_per_epoch * epoch + optim_iter
@@ -358,7 +349,6 @@ def train(
         for k, param_group in enumerate(optimizer.param_groups):
             param_group["lr"] = lr_schedule[it]
 
-        # inputs_clean = inputs_['clean_img'].cuda(args.gpu, non_blocking=True)
         inputs_aug = inputs_['aug_img'].cuda(args.gpu, non_blocking=True)
         inputs_text = inputs_['caption'].cuda(args.gpu, non_blocking=True)
         with amp.autocast(enabled=not args.disable_amp):
@@ -457,8 +447,8 @@ def validate_zeroshot(val_loader, model, tokenizer, args, mid=False, logFile=Non
     logit_scale = utils.get_model(model).logit_scale.exp().item()
     with torch.no_grad():
         text_features = []
-        for l in labels:
-            texts = [t.format(l) for t in templates]
+        for lb in labels:
+            texts = [t.format(lb) for t in templates]
             texts = tokenizer(texts).cuda(args.gpu, non_blocking=True)
             texts = texts.view(-1, 77).contiguous()
 
@@ -477,7 +467,7 @@ def validate_zeroshot(val_loader, model, tokenizer, args, mid=False, logFile=Non
             text_features.append(class_embeddings)
         # print(class_embeddings.size())
         text_features = torch.stack(text_features, dim=0)
-        cos_sim_lis = []
+
         end = time.time()
         for i, (images, target) in enumerate(val_loader):
             images = images.cuda(args.gpu, non_blocking=True)
