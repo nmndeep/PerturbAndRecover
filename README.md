@@ -94,7 +94,7 @@ _________________________________
 
 If you use our code/models cite our work using the following BibTex entry:
 ```bibtex
-@article{singh2024perturbrecoverfinetuningeffective,
+@article{singh2024PAR,
       title={Perturb and Recover: Fine-tuning for Effective Backdoor Removal from CLIP}, 
       author={Naman Deep Singh and Francesco Croce and Matthias Hein},
       journal = {arXiv preprint},
