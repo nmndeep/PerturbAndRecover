@@ -18,10 +18,16 @@ Paper: [arXiv](https://arxiv.org/abs/2412.00727)
 
 <div align="center">
 <h4> Proposed Triggers</h4>
-<p align="center"><img src="/asset/vis_triggers.png" width="500"></p>
+<p align="center"><img src="/asset/vis_triggers.png" width="400"> </br> The triggers can be used as-is in either BadNet or Blended attacks.</p>
+</div>
 
-<h5> The proposed cleaning method, PAR yields a better ASR (Attack success rate)-CA (Clean accuracy) curve than the baselines. PAR works with both the real(CC3M) and synthetic data(SynC)</h5>
+---------------------------------
+
+<div align="center">
+<h4> Clean Accuracy- Attack success rate trade-off</h4>
 <p align="center"><img src="/asset/tradeoff_curve.png" width="400"></p>
+The proposed cleaning method, PAR yields a better ASR (Attack success rate)-CA (Clean accuracy) curve than the baselines. PAR works with both the real(CC3M) and synthetic data(SynC)
+
 </div>
 
 
