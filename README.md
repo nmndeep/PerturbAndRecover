@@ -20,8 +20,7 @@ Paper: [arXiv](https://arxiv.org/abs/2412.00727)
 <h4> Proposed Triggers</h4>
 <p align="center"><img src="/asset/vis_triggers.png" width="500"></p>
 
-<h5> The proposed cleaning method, PAR yields a better ASR (Attack success rate)-CA (Clean accuracy) curve than the baselines. </br>
-	PAR works with both the real(CC3M) and synthetic data(SynC)</h5>
+<h5> The proposed cleaning method, PAR yields a better ASR (Attack success rate)-CA (Clean accuracy) curve than the baselines. PAR works with both the real(CC3M) and synthetic data(SynC)</h5>
 <p align="center"><img src="/asset/tradeoff_curve.png" width="400"></p>
 </div>
 
