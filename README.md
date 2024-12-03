@@ -86,4 +86,19 @@ _________________________________
 The code in this repository is partially based on the following publically available codebases.
 
 1. [https://github.com/nishadsinghi/CleanCLIP](https://github.com/nishadsinghi/CleanCLIP)
-2. [https://github.com/LiangSiyuan21/BadCLIP](https://github.com/LiangSiyuan21/BadCLIP) 
+2. [https://github.com/LiangSiyuan21/BadCLIP](https://github.com/LiangSiyuan21/BadCLIP)
+
+_________________________________
+
+<h4>Citation</h4>
+
+If you use our code/models cite our work using the following BibTex entry:
+```bibtex
+@article{singh2024perturbrecoverfinetuningeffective,
+      title={Perturb and Recover: Fine-tuning for Effective Backdoor Removal from CLIP}, 
+      author={Naman Deep Singh and Francesco Croce and Matthias Hein},
+      journal = {arXiv preprint},
+      year = {2024}
+      url={https://arxiv.org/abs/2412.00727}, 
+}
+```
